@@ -27,7 +27,7 @@
 > select * from roles;  
 > select * from users;
 
-### Seps for creating User Provided Service for Cross Schema Access
+### Steps for creating User Provided Service for Cross Schema Access
 
 In this demo, the database artifacts from our SAP Hana Database Project (i.e. Synonyms, Calc Views) would reside in its own HDI container whereas the database objects (i.e. DWC Demo Schema tables) would be present in a Hana DB outside the container. To facilitate the access from HDI container to the Hana DB, we need to create a service that takes care of the access and privileges.  
 
@@ -45,3 +45,29 @@ In this demo, the database artifacts from our SAP Hana Database Project (i.e. Sy
 	"tags": "hana"
 }
 ```
+![screenshot_for_ups]()
+
+* Click on **Save**
+
+### Steps for Cloning the GIT Repository and deploying the project
+
+* Open the **SAP Hana Web IDE-Full Stack** from your **SAP Cloud Platform Cockpit**
+* From the left-menu, right click on **Workspace** and go to **Git -> Clone Repository**
+* Enter the URL as [https://github.com/kulkarniamogh/DWC_Demo.git](https://github.com/kulkarniamogh/DWC_Demo.git)
+* Click on **Clone**
+* Once the cloning process is completed, you would be able to see the project **DWC\_Demo** under your Workspace
+* Right-click on the project and go to **Project -> Project Settings**
+* Under **Cloud Foundry**, point the project to a valid **Space** on your CF account by selecting the API Endpoint, Organization and Space.
+* Click **Save** and then click **Close**
+* Now right click on the folder **db** and go to **Build -> Build**
+
+> Note that, you have to right click the **db** module and build it. This step deploys the artifacts in the project's HDI container by converting the design-time artifacts to run-time artifacts.
+
+* Once build process is completed successfully, open the **Database Explorer**
+* Click on the add sign (+) at the top of the left-side menu
+* Under the **HDI Containers** list, you will see the newly deployed HDI container. Select it and click on **OK**
+* It will be then added to the list of containers on your Database Explorer.
+* As a part of our project, we have created **Synonyms** which you can check by navigating to the **Your HDI Container -> Synonyms**
+* Navigate to **Your HDI Cotainer -> Column Views** and select **Sales Per Category** from the left-bottom window
+* From the newly opened window, click on **Open Data** and then click on **Raw Data**
+* You can also analyze the data under the **Analysis Tab**
