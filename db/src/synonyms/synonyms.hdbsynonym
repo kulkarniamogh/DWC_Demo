@@ -1,0 +1,38 @@
+{
+  "SYN_Addresses": {
+    "target": {
+      "object": "Addresses",
+      "schema": "DWC_Demo_Schema"
+    }
+  },
+  "SYN_BusinessPartner": {
+  	"target": {
+      "object": "BusinessPartner",
+      "schema": "DWC_Demo_Schema"
+    }
+  },
+  "SYN_Employees": {
+  	"target": {
+      "object": "Employees",
+      "schema": "DWC_Demo_Schema"
+    }
+  },
+  "SYN_Products": {
+  	"target": {
+      "object": "Products",
+      "schema": "DWC_Demo_Schema"
+    }
+  },
+  "SYN_SalesOrderItems": {
+  	"target": {
+      "object": "SalesOrderItems",
+      "schema": "DWC_Demo_Schema"
+    }
+  },
+  "SYN_SalesOrders": {
+  	"target": {
+      "object": "SalesOrders",
+      "schema": "DWC_Demo_Schema"
+    }
+  }
+}

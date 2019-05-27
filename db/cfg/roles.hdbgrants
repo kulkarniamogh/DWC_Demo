@@ -1,0 +1,14 @@
+{
+  "CROSS_SCHEMA_ACCESS": {
+     "object_owner": {
+           "roles": [
+               "DWC_DEMO_ROLE"
+           ]
+     },
+     "application_user": {
+           "roles": [
+               "DWC_DEMO_ROLE"
+           ]
+     }
+  }
+}
