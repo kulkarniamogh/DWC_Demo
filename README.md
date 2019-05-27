@@ -2,7 +2,7 @@
 
 ### Steps for importing DB objects
 
-* Download the DB schema file - DWC_Demo_Schema.tar.gz
+* Download the DB schema file - [DWC\_Demo\_Schema.tar.gz](https://github.com/kulkarniamogh/DWC_Demo/blob/master/db_setup/DWC_Demo_Schema.tar.gz?raw=true)
 * From the Cloud Platform Cockpit, navigate to, your space -> Services -> Service Instances -> Name of your database (with hana-db service) -> Open Dashboard -> Go To SAP Hana Cockpit -> From the cockpit, go to Database Explorer
 * You will find your Cockpit Resource Database in the list on the left side
 * Under the DB, expand Catalog and then right click on **Schemas** and click on **Import Catalog Objects**
@@ -26,3 +26,22 @@
 * You can check the newly created roles and users by running the following commands  
 > select * from roles;  
 > select * from users;
+
+### Seps for creating User Provided Service for Cross Schema Access
+
+In this demo, the database artifacts from our SAP Hana Database Project (i.e. Synonyms, Calc Views) would reside in its own HDI container whereas the database objects (i.e. DWC Demo Schema tables) would be present in a Hana DB outside the container. To facilitate the access from HDI container to the Hana DB, we need to create a service that takes care of the access and privileges.  
+
+* Open your **SAP Cloud Platform Cockpit**
+* Navigate to Your Space -> Services -> User-Provided Services 
+* On the newly opened window, click on **New Instance**
+* Enter the name of the instance as **CROSS\_SCHEMA\_ACCESS**
+* In the credentials section, enter the following code:
+
+```
+{
+	"password": "Welcome2",
+	"driver": "com.sap.db.jdbc.Driver",
+	"user": "DWC_DEMO_User",
+	"tags": "hana"
+}
+```
