@@ -71,3 +71,5 @@ In this demo, the database artifacts from our SAP Hana Database Project (i.e. Sy
 * Navigate to **Your HDI Cotainer -> Column Views** and select **Sales Per Category** from the left-bottom window
 * From the newly opened window, click on **Open Data** and then click on **Raw Data**
 * You can also analyze the data under the **Analysis Tab**
+
+> If you encounter any error while building the **db** module with regards to **synonyms**, using the Web IDE open the file db -> src -> synonyms -> synonyms.hdbsynonym and update the pointing to the schema and tables that we have created in this setup. 
