@@ -8,12 +8,12 @@
 * Under the DB, expand Catalog and then right click on **Schemas** and click on **Import Catalog Objects**
 * Browse for the file **DWC\_Demo\_Schema.tar.gz**. As soon as you select the file, it will load all the DB objects. Here you can also set the name of the schema. It is recommended at this point to not change it as we would be using the schema name in further steps.
 
-![screenshot_for_dbimport](screenshots\dbimport.png)
+![screenshot_for_dbimport](screenshots/dbimport.png)
 
 * Click on **Import**
 * Once imported, you would be able to see all the tables under the **DWC\_Demo\_Schema** in the left-bottom window. Click on the **Tables** from top left menu. 
 
-![screenshot_for_dbtables](screenshots\dbtables.png)
+![screenshot_for_dbtables](screenshots/dbtables.png)
 
 ### Steps for creating database user, role and granting role to user
 
@@ -45,7 +45,7 @@ In this demo, the database artifacts from our SAP Hana Database Project (i.e. Sy
 	"tags": "hana"
 }
 ```
-![screenshot_for_ups](screenshots\ups.png)
+![screenshot_for_ups](screenshots/ups.png)
 
 * Click on **Save**
 
